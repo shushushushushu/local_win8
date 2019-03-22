@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<a id='baidu' target="_blank" href="www.baidu.com" class="lead">百度</a>
+	<a href="www.360.cn" class="lead">360</a>
+	<a href="www.microsoft.com" class="lead">微软</a>
+	<div class="container">
+		<div class="row">
+			<div class="col-4 text-uppercase bg-light text-white">this is Line1</div>
+			<div class="col-4 text-lowercase">this is Line2</div>
+			<div class="col-4 text-capitalize">this is Line3</div>
+		</div>
+		<ul class="list-inline">
+			<li class="list-inline-item">coffee</li>
+			<li class="list-inline-item">tee</li>
+			<li class="list-inline-item">water</li>
+		</ul>
+	</div>
+
+	<div class="table-responsive">
+		<table class="table table-striped table-hover">
+		    <thead>
+		      	<tr>
+			        <th>Firstname</th>
+			        <th>Lastname</th>
+			        <th>Email</th>
+		      	</tr>
+		    </thead>
+		    <tbody>
+		      	<tr>
+			        <td>John</td>
+			        <td>Doe</td>
+			        <td>john@example.com</td>
+		      	</tr>
+		      	<tr>
+			        <td>Mary</td>
+			        <td>Moe</td>
+			        <td>mary@example.com</td>
+		      	</tr>
+		      	<tr>
+			        <td>July</td>
+			        <td>Dooley</td>
+			        <td>july@example.com</td>
+		      	</tr>
+		    </tbody>
+		</table>
+	</div>
+
+	<div class="alert alert-success alert-dismissible fade show">
+		<button type="button" class="close" data-dismiss='alert'>&times;</button>
+		<strong>成功</strong>
+	</div>
+
+	<button type="button" class="btn btn-primary active">点击</button>
+	<button type="button" class="btn btn-primary" disabled>不能点击</button>
+	<a class="btn btn-primary disabled">禁止点击的链接</a>
+
+	<div class="btn-group btn-group-lg">
+		<button type="button" class="btn btn-primary">Apple</button>
+		<button type="button" class="btn btn-primary">Samsung</button>
+		<button type="button" class="btn btn-primary">Sony</button>
+	</div>
+
+	<div class="btn btn-group">
+		<button type="button" class="btn btn-primary">Apple</button>
+		<button type="button" class="btn btn-primary">Samsung</button>
+		<div class="btn-group">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle='dropdown'>Sony</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item">Sony-1</a>
+				<a class="dropdown-item">Sony-2</a>
+			</div>
+		</div>
+	</div>
+
+	<span class="badge badge-pill badge-primary">主要</span>
+	<span class="badge badge-pill badge-info">信息</span>
+
+	<div class="progress">
+		<div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 60%;"></div>
+		<div class="progress-bar bg-warning" style="width:10%">
+		    Warning
+		</div>
+	</div>
+
+	<ul class="pagination">
+		<li class="page-item disabled"><a class="page-link" href="#">previous</a></li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">next</a></li>
+	</ul>
+
+	<ul class="breadcrumb">
+		<li class="breadcrumb-item"><a href="#">home</a></li>
+		<li class="breadcrumb-item"><a href="#">operation</a></li>
+		<li class="breadcrumb-item active">edit</li>
+	</ul>
+
+	<ul class="list-group">
+		<li class="list-group-item disabled">Disable Line</li>
+		<li class="list-group-item">Second Line</li>
+		<li class="list-group-item">Third Line</li>
+	</ul>
+	<div class="list-group">
+		<a href="https://www.baidu.com" class="list-group-item list-group-item-action disabled">www.baidu.com</a>
+		<a href="https://www.360.cn" class="list-group-item list-group-item-action list-group-item-info">360</a>
+		<a href="https://www.qq.com" class="list-group-item list-group-item-action">QQ</a>
+	</div>
+
+	<div class="card" style="width:400px;">
+		<img class="card-img-top" src="./Koala.jpg" alt="Card img" />
+		<div class="card-body">
+			<h4 class="card-title">Joke Michel</h4>
+			<p class="card-text">Some example text</p>
+			<a href="#" class="btn btn-primary">See Profile</a>
+		</div>
+	</div>
+
+	<div id="accordion">
+		<div class="card">
+			<div class="card-header">
+				<a href="#collapseone" class="card-link" data-toggle="collapse">Option 1</a>
+			</div>
+			<div id="collapseone" class="collapse show" data-parent='#accordion'>
+				<div class="card-body">
+					This is option 1!
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<a href="#collapsetwo" class="card-link" data-toggle="collapse">Option 2</a>
+			</div>
+			<div id="collapsetwo" class="collapse" data-parent='#accordion'>
+				<div class="card-body">
+					This is option 2!
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header">
+				<a href="#collapsethree" class="card-link" data-toggle="collapse">Option 3</a>
+			</div>
+			<div id="collapsethree" class="collapse" data-parent='#accordion'>
+				<div class="card-body">
+					This is option 3!
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
+<script type="text/javascript" src="./jquery.min.js"></script>
+<script type="text/javascript">
+	/*var atags = $('a');
+	console.log(atags[1]);
+	var body_width = $('body').width();
+	console.log(body_width);*/
+</script>
