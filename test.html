@@ -8,6 +8,21 @@
 	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.border {
+		    display: inline-block;
+		    width: 70px;
+		    height: 70px;
+		    margin: 6px;
+		}
+		.roundedes span {
+		    display: inline-block;
+		    width: 70px;
+		    height: 70px;
+		    margin: 6px;
+		    background-color: #555;
+		}
+	</style>
 </head>
 <body>
 	<a id='baidu' target="_blank" href="www.baidu.com" class="lead">百度</a>
@@ -159,12 +174,294 @@
 		</div>
 	</div>
 
+	<ul class="nav justify-content-center">
+		<li class="nav-item">
+			<a href="#" class="nav-link">Link1</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link">Link2</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link disabled">Link3</a>
+		</li>
+	</ul>
+	<ul class="nav flex-column">
+		<li class="nav-item">
+			<a href="#" class="nav-link">Link1</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link">Link2</a>
+		</li>
+		<li class="nav-item">
+			<a href="#" class="nav-link">Link3</a>
+		</li>
+	</ul>
+	<ul class="nav nav-tabs">
+		<li class="nav-item">
+			<a href="#menu1" data-toggle='tab' class="nav-link active">Link1</a>
+		</li>
+		<li class="nav-item">
+			<a href="#menu2" data-toggle='tab' class="nav-link">Link2</a>
+		</li>
+		<li class="nav-item">
+			<a href="#menu3" data-toggle='tab' class="nav-link">Link3</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane container active" id="menu1">menu1 content</div>
+		<div class="tab-pane container" id="menu2">menu2 content</div>
+		<div class="tab-pane container" id="menu3">menu3 content</div>
+	</div>
+
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-bottom">
+		<a class="navbar-brand" href="#">Logo</a>
+		<button class="navbar-toggler" type="button" data-toggle='collapse' data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a href="#" class="nav-link">link1</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">link2</a></li>
+				<li class="nav-item"><a href="#" class="nav-link">link3</a></li>
+			</ul>
+			<span class="navbar-text">Navbar-text</span>
+		</div>
+	</nav>
+	<div class="container">
+		<h3>折叠导航栏</h3>
+		<p>通常，小屏幕上我们都会折叠导航栏，通过点击来显示导航选项。</p>
+		<p>提示: 如果你删除 .navbar-expand-md 类，导航链接会一直隐藏，且切换按钮会一直显示。</p>
+	</div>
+
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+		<form class="form-inline">
+			<input class="form-control" type="text" placeholder="Search" />
+			<button type='submit' class="btn btn-primary">Search</button>
+		</form>
+	</nav>
+
+	<form>
+		<div class="form-group">
+			<label for="email">Email address:</label>
+			<input type="email" value="" class="form-control" id="email">
+		</div>
+		<div class="form-inline">
+			<label for="pwd">PassWord:</label>
+			<input type="password" value="" class="form-control" id="pwd">
+		</div>
+		<button class="btn btn-primary" type="submit">Submit</button>
+	</form>
+
+	<form>
+		<!-- checkbox -->
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" value="opt1">opt1
+			</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<label class="form-check-label">
+				<input class="form-check-input" type="checkbox" value="opt2">opt2
+			</label>
+		</div>
+
+		<!-- radio -->
+		<div class="radio">
+			<label>
+				<input type="radio" name="radioopt" value="opt1">opt1
+			</label>
+		</div>
+		<div class="radio">
+			<label>
+				<input type="radio" name="radioopt" value="opt2">opt2
+			</label>
+		</div>
+		<div class="radio disabled">
+			<label>
+				<input type="radio" name="radioopt" value="opt2" disabled>opt2
+			</label>
+		</div>
+
+		<!-- select -->
+		<div class="form-group">
+			<label for="selMenu">下拉菜单：</label>
+			<select class="form-control" id="selMenu" name="downmenu">
+				<option value="opt1">opt1</option>
+				<option value="opt2">opt2</option>
+				<option value="opt3" disabled>opt3</option>
+			</select>
+		</div>
+	</form>
+
+	<form>
+		<div class="input-group mb-3 input-group-sm">
+			<div class="input-group-prepend">
+				<span class="input-group-text">@</span>
+			</div>
+			<input type="text" class="form-control" placeholder="username" />
+		</div>
+		<div class="input-group mb-3 input-group-lg">
+			<input type="text" class="form-control" placeholder='email address'>
+			<div class="input-group-append">
+				<span class="input-group-text">@email</span>
+			</div>
+		</div>
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text">
+					<input type="radio">
+				</span>
+			</div>
+			<input type="text" class="form-control" placeholder="Google" />
+		</div>
+	</form>
+
+	<div class="input-group mt-3 mb-3">
+		<div class="input-group-prepend">
+			<button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+				Select
+			</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Google</a>
+				<a class="dropdown-item" href="#">Runoob</a>
+				<a class="dropdown-item" href="#">Baidu</a>
+			</div>
+		</div>
+		<input class="form-control" type="text" placeholder="Search" />
+	</div>
+	<form>
+		<div class="custom-control custom-checkbox">
+			<input type="checkbox" class="custom-control-input" id="custombox" name="example1">
+			<label class="custom-control-label" for="custombox">自定义复选框</label>
+		</div>
+
+		<div class="custom-control custom-radio custom-control-inline">
+			<input type="radio" class="custom-control-input" id="customradio1" name="customradio" value="op1">
+			<label class="custom-control-label" for="customradio1">自定义单选框1</label>
+		</div>
+		<div class="custom-control custom-radio custom-control-inline">
+			<input type="radio" class="custom-control-input" id="customradio2" name="customradio" value="op2">
+			<label class="custom-control-label" for="customradio2">自定义单选框2</label>
+		</div>
+
+		<select class="custom-select-sm" name="selmenu">
+			<option selected>自定义选择菜单</option>
+			<option value="Google">Google</option>
+			<option value="Baidu">Baidu</option>
+			<option value="Runoob">Runoob</option>
+		</select>
+
+		<label for="customrange">自定义滑块</label>
+		<input type="range" name="num" id='customrange' class="custom-range">
+
+		<div class="custom-file">
+			<input type="file" name="upfile" id="customfile" class="custom-file-input">
+			<label class="custom-file-label" for="customfile">选择文件</label>
+		</div>
+	</form>
+	
+
+	<!-- 模态框 -->
+	<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">模态框</button>
+	<div class="modal" id="myModal">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">模态框头部</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+					模态框内容。。。
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 提示框 -->
+	<a href="#" data-toggle="tooltip" data-placement="top" title="我是内容！">鼠标移动到我这儿</a>
+	<a href="#" data-toggle="tooltip" data-placement="bottom" title="我是内容！">鼠标移动到我这儿</a>
+	<a href="#" data-toggle="tooltip" data-placement="left" title="我是内容！">鼠标移动到我这儿</a>
+	<a href="#" data-toggle="tooltip" data-placement="right" title="我是内容！">鼠标移动到我这儿</a>
+
+
+	<!-- 小工具 -->
+	<div>
+		<span class="border border-top-0 border-info"></span>	
+	</div>
+	
+	<div class="roundedes">
+		<span class="rounded"></span>
+		<span class="rounded-top"></span>
+		<span class="rounded-circle"></span>
+		<span class="rounded-0"></span>
+	</div>
+
+	<div class="clearfix">
+		<span class="float-left">左浮动</span>
+		<span class="float-right">右浮动</span>
+		<span class="float-sm-left">sm左浮动</span>
+		<span class="float-sm-right">sm右浮动(在大于小屏幕尺寸上右浮动)</span>
+	</div>
+
+	<div class="mx-auto bg-warning" style="width:150px;">居中</div>
+
+	<div class="w-25 bg-warning mt-3">宽度25%</div>
+	<div class="w-100 bg-warning mt-3">宽度100%</div>
+	<div class="mw-100 bg-warning mt-3">最大宽度100%</div>
+
+	<div style="background-color:#ddd; height:300px; margin-top:20px;">
+		<div class="h-50 w-25 bg-warning float-left">高度50%</div>
+		<div class="mh-100 w-25 bg-warning float-right" style="height:500px;">最大高度100%</div>
+	</div>
+	
+
+	<!-- 多媒体对象 -->
+	<div class="media mt-3 w-100">
+		<img src="Koala.jpg" class="align-self-start mr-3" style="width:50px;">
+		<div class="media-body">
+			<h4>菜鸟教程</h4>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+		</div>
+	</div>
+	<div class="media mt-3 w-100">
+		<img src="Koala.jpg" class="align-self-center mr-3" style="width:50px;">
+		<div class="media-body">
+			<h4>菜鸟教程</h4>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+		</div>
+	</div>
+	<div class="media mt-3 w-100">
+		<img src="Koala.jpg" class="align-self-end mr-3" style="width:50px;">
+		<div class="media-body">
+			<h4>菜鸟教程</h4>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+			<p>学的不仅仅是技术，更是梦想！</p>
+		</div>
+	</div>
+
+	<div class="clearfix" style="margin-bottom: 56px;"></div>
 </body>
 </html>
-<script type="text/javascript" src="./jquery.min.js"></script>
 <script type="text/javascript">
 	/*var atags = $('a');
 	console.log(atags[1]);
 	var body_width = $('body').width();
 	console.log(body_width);*/
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+	}); //需要调用上面版本的jquery，之前自己下载的jquery没有tooltip方法
 </script>
